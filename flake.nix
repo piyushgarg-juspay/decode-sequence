@@ -9,9 +9,12 @@
       overlay = final: prev: {
         sashakt = final.callCabal2nix "sashakt" ./. { };
       };
-      myHaskellPackages = pkgs.haskellPackages.extend overlay;
+      myHaskellPackages = pkgs.haskell.packages.ghc8107.extend overlay;
     in
     {
+      # mark as non broken
+      haskellProjects.default.settings.classyplate.broken = false;
+
       # What to build for nix build
       packages.${system}.default = myHaskellPackages.sashakt;
 
