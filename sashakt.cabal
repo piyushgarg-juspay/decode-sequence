@@ -1,0 +1,50 @@
+cabal-version:      3.0
+name:               sashakt
+version:            0.1.0.0
+-- A short (one-line) description of the package.
+-- synopsis:
+-- A longer description of the package.
+-- description:
+-- A URL where users can report bugs.
+-- bug-reports:
+-- The license under which the package is released.
+-- license:
+author:             piyush.garg
+maintainer:         piyush.garg@juspay.in
+
+extra-source-files: CHANGELOG.md
+executable sashakt
+    main-is:          Parser.hs
+    other-modules:    ModuleParser
+    build-depends:    base,
+                      directory,
+                      shelly,
+                      containers,
+                      extra,
+                      unordered-containers,
+                      Cabal,
+                      Cabal-syntax,
+                      bytestring,
+                      aeson,
+                      csv,
+                      cassava,
+                      http-client,
+                      http-client-tls,
+                      text-short,
+                      yaml,
+                      aeson-yaml,
+                      vector,
+                      text,
+                      http-types,
+                      ghc,
+                      ghc-paths,
+                      ghc-boot,
+                      optparse-applicative,
+                      filepath,
+                      ghc-exactprint,
+                      ghc-source-gen,
+                      ascii-char,
+                      uuid,
+                      ormolu
+    hs-source-dirs:   app
+    default-language: Haskell2010
